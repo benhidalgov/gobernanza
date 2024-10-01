@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}Campaña de Actualización de Datos{% endblock %}
+    </title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="{% static 'assets/img/Logo_DuocUC.png' %}" alt="Logo" />
+          <span>DuocUc</span>
+        </div>
+        <ul>
+          <li><a href="{% url 'index' %}">Inicio</a></li>
+          <li><a href="{% url 'actualizacion' %}">Actualizar Datos</a></li>
+          <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+        </ul>
+        <div class="user-profile">
+          <img src="{% static 'assets/img/1077114.png' %}" alt="User Icon" />
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      
+      <div class="main-content">
+        <h1>Campaña actualizacion</h1>
+        <div class="top-section">
+          {% block content %}
+          <!-- Aquí va el contenido principal -->
+          {% endblock %}
+        </div>
+        
+        <div class="bottom-section">
+          <div class="left-bottom">
+            <h2>Sección Izquierda</h2>
+            <p>Aquí puedes colocar información adicional o formularios.</p>
+          </div>
+          <div class="right-bottom">
+            <h2>Sección Derecha</h2>
+            <p>Aquí puedes colocar información adicional o formularios.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2024 DuocUc. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  background: #ffffff; /* Fondo blanco */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Estilos para el header */
+header {
+  background-color: #173552; /* Azul institucional */
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.logo span {
+  color: #fbbb2c; /* Amarillo institucional */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+ul li {
+  margin-right: 20px;
+}
+
+ul li a {
+  color: #d5dada; /* Gris institucional */
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+ul li a:hover {
+  background-color: #fbbb2c; /* Amarillo institucional */
+  border-radius: 5px;
+  color: #173552; /* Azul institucional */
+}
+
+.user-profile img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+/* Estilos para el contenido principal */
+.container {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar el contenido dentro de main-content */
+}
+
+.top-section {
+  width: 100%;
+  max-width: 400px; /* Ancho máximo del cuadro */
+  margin-bottom: 1rem;
+  background-color: #ffffff; /* Fondo blanco para la sección principal */
+  padding: 2rem; /* Ajuste de padding para el cuadro */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Bordes redondeados para el cuadro */
+}
+
+h3.login-title {
+  color: #173552; /* Azul institucional */
+  margin-bottom: 0.5rem;
+  text-align: center; /* Centra el texto */
+}
+
+p.login-subtitle {
+  color: #555; /* Gris oscuro para subtítulo */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.input-container {
+  margin-bottom: 1rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d5dada; /* Gris claro */
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.input-field:focus {
+  border-color: #fbbb2c; /* Amarillo institucional */
+  outline: none;
+}
+
+.login-actions {
+  display: flex;
+  flex-direction: column; /* Cambia a columna para apilar el enlace y botón */
+  align-items: center; /* Centra el contenido dentro de login-actions */
+}
+
+.forgot-password {
+  color: #fbbb2c; /* Amarillo institucional */
+  text-decoration: none;
+  margin-top: 0.5rem; /* Espaciado entre el botón y el enlace */
+  text-align: center; /* Centra el enlace */
+}
+
+.login-button {
+  padding: 10px 15px;
+  background-color: #fbbb2c; /* Amarillo institucional */
+  border: none;
+  border-radius: 5px;
+  color: #173552; /* Azul institucional */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #d5dada; /* Gris claro */
+  color: #173552; /* Azul institucional */
+}
+
+/* Estilos para el footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #173552; /* Azul institucional */
+  color: #fbbb2c; /* Amarillo institucional */
+}
+
+/* Media Queries para hacer el diseño responsivo */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul li {
+    margin-bottom: 10px;
+  }
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between; /* Espacio entre las secciones */
+  margin-top: 2rem; /* Espacio entre la sección superior y la inferior */
+}
+
+.left-bottom,
+.right-bottom {
+  width: 48%; /* Ajustar el ancho de las secciones */
+  background-color: #f9f9f9; /* Fondo ligero para las secciones */
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  border-radius: 5px; /* Bordes redondeados */
+}

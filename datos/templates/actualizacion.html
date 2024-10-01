@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recogida de Datos</title>
+    <link rel="stylesheet" href="{% static 'assets/css/styles2.css' %}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="{% static 'assets/img/Logo_DuocUC.png' %}" alt="Logo" />
+          <span>DuocUc</span>
+        </div>
+        <ul>
+          <li><a href="{% url 'index' %}">Inicio</a></li>
+          <li><a href="{% url 'actualizacion' %}">Actualizar Datos</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
+        </ul>
+        <div class="user-profile">
+          <img src="{% static 'assets/img/1077114.png' %}" alt="User Icon" />
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="main-content">
+        <section
+          class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800"
+        >
+          <h2
+            class="text-lg font-semibold text-gray-700 capitalize dark:text-white"
+          >
+            Datos Pre-cargados
+          </h2>
+
+          <form class="grid grid-cols-2 gap-6">
+            <!-- Left side form: Pre-loaded Data -->
+            <div>
+              <label
+                for="personalEmail"
+                class="text-gray-700 dark:text-gray-200"
+                >Correo Personal</label
+              >
+              <input
+                id="personalEmail"
+                type="email"
+                class="input-field"
+                required
+              />
+              <input
+                type="checkbox"
+                id="validEmail"
+                class="valid-check"
+                checked
+              />
+              <label for="validEmail">Válido actualmente</label>
+
+              <label for="cellphone" class="text-gray-700 dark:text-gray-200"
+                >Celular</label
+              >
+              <input id="cellphone" type="tel" class="input-field" required />
+              <input
+                type="checkbox"
+                id="validCellphone"
+                class="valid-check"
+                checked
+              />
+              <label for="validCellphone">Válido actualmente</label>
+
+              <label
+                for="currentCompany"
+                class="text-gray-700 dark:text-gray-200"
+                >Empresa Actual</label
+              >
+              <input
+                id="currentCompany"
+                type="text"
+                class="input-field"
+                required
+              />
+              <input
+                type="checkbox"
+                id="validCompany"
+                class="valid-check"
+                checked
+              />
+              <label for="validCompany">Válido actualmente</label>
+
+              <label
+                for="currentPosition"
+                class="text-gray-700 dark:text-gray-200"
+                >Cargo Actual</label
+              >
+              <input
+                id="currentPosition"
+                type="text"
+                class="input-field"
+                required
+              />
+              <input
+                type="checkbox"
+                id="validPosition"
+                class="valid-check"
+                checked
+              />
+              <label for="validPosition">Válido actualmente</label>
+
+              <label for="linkedinUrl" class="text-gray-700 dark:text-gray-200"
+                >URL de LinkedIn</label
+              >
+              <input id="linkedinUrl" type="url" class="input-field" required />
+              <input
+                type="checkbox"
+                id="validLinkedin"
+                class="valid-check"
+                checked
+              />
+              <label for="validLinkedin">Válido actualmente</label>
+            </div>
+
+            <!-- Right side form: Personal Information Update -->
+            <div>
+              <h2
+                class="text-lg font-semibold text-gray-700 capitalize dark:text-white"
+              >
+                Actualización de Datos Personales
+              </h2>
+
+              <label for="rut" class="text-gray-700 dark:text-gray-200"
+                >RUT</label
+              >
+              <input id="rut" type="text" class="input-field" required />
+
+              <label for="titledName" class="text-gray-700 dark:text-gray-200"
+                >Nombre Titulado</label
+              >
+              <input id="titledName" type="text" class="input-field" required />
+
+              <label
+                for="eventParticipate"
+                class="text-gray-700 dark:text-gray-200"
+                >Evento a Participar</label
+              >
+              <select id="eventParticipate" class="input-field">
+                <option value="" disabled selected>Selecciona un evento</option>
+                <option value="evento1">Evento 1</option>
+                <option value="evento2">Evento 2</option>
+                <option value="evento3">Evento 3</option>
+              </select>
+            </div>
+          </form>
+
+          <div class="flex justify-end mt-6">
+            <button type="submit" class="login-button">Guardar</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2024 DuocUc. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
